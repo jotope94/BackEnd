@@ -52,10 +52,10 @@ class UsuarioController extends Controller
         
         if(!empty( $user) && $user->senha == $request->senha)
         {
-            return "entrou";
+            return true;
         }
 
-        return "nao entrou";
+        return false;
     }
 
     public function getUsuarioByEmail($email){
